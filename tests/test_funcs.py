@@ -7,6 +7,7 @@ import shutil
 def test_clone():
     assert os.path.exists(clone_repo(1)) == True
 
+
 def test_update_from_dir():
     dir_name = 'dir_test/files'
     file_name = 'file_test_2.txt'
@@ -20,8 +21,10 @@ def test_update_from_dir():
     assert hash_dir_test != hash_folder_1
     shutil.rmtree(r'C:\Users\vladi\Desktop\job_test\dir_test')
 
+
 def test_sha256_dir():
     assert type(sha256_dir(r"C:\Users\vladi\Desktop\job_test\folder_1")) == str
+
 
 def test_main():
     num = 2

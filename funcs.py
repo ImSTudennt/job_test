@@ -5,8 +5,6 @@ import hashlib
 from pathlib import Path
 
 
-
-
 def clone_repo(i):
     name_folder = f'folder_{i}'
     os.mkdir(name_folder)
@@ -29,6 +27,7 @@ def sha256_update_from_dir(directory, hash):
 
 def sha256_dir(directory):
     return sha256_update_from_dir(directory, hashlib.sha256()).hexdigest()
+
 
 def main(num):
     process = [Process(target=clone_repo, args=(f'{i}',)) for i in range(3)]
